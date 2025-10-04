@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <stdio.h>
 using namespace std;
 
 // //problem 1
@@ -85,27 +86,119 @@ using namespace std;
 //}
 
 //problem 6
-void Factorial(int n = 1) {
-    int fact = 1;
+/*long long Factorial(int n = 1) {
+    long long result = 1;
     for (int i = 1; i <= n; i++) {
-        fact *= i;
+        result *= i;
     }
-    return fact;
+    return result;
 }
 int main() {
     int num;
-    char choice;
-cout << "Do you want to enter a number? (y/n): ";
-    cin >> choice;
-if (choice == 'y') {
-    cout << "Enter a number: ";
     cin >> num;
-    cout << "Factorial of " << num << " = " << Factorial(num) << endl;
-} else {
-    cout << "No parameter. Factorial of 1 " << Factorial() << endl;
+    cout << Factorial(num);
+
+    return 0;
 }
-cout << "/nAlternative demonstration: " << endl;
-cout << "Factorial(5) = " << Factorial(5) << endl;
-cout << "Factorial() = " << Factorial() << endl;
+
+//problem 7
+int gcd(int num1, int num2) {
+    while (num2 != 0) {
+        int temp = num2;
+        num2 = num1 % num2;
+        num1 = temp;
+    }
+    return num1;
+}
+int main() {
+    int a, b;
+    cin >> a >> b;
+
+    cout << "GCD: " << gcd(a, b) << endl;
+    return 0;
+}
+
+//problem 8
+int min(int a, int b, int c) {
+    if (a < b and a < c) {
+        return a;
+    }
+    else if (b < c and b < a) {
+        return b;
+    }
+    else {
+        return c;
+    }
+}
+
+int max(int a, int b, int c) {
+    if (a > b and a > c) {
+        return a;
+    } else if (b > c and b > a) {
+        return b;
+    }
+    else {
+        return c;
+    }
+}
+
+int main() {
+    int a, b, c;
+    cin >> a >> b >> c;
+    cout << "Min is: " << min(a, b, c) << endl;
+    cout << "Max is: " << max(a, b, c) << endl;
+}
+
+//problem 9
+int sum(int a, int b) {
+    return a + b;
+}
+int subtract(int a, int b) {
+    return a - b;
+}
+int product(int a, int b) {
+    return a * b;
+}
+double division(int a, int b) {
+    if (b == 0) {
+        cout << " Error: Division by zero! " << endl;
+        return 0;
+    }
+    return (double)a / b;
+}
+int main() {
+    int num1, num2;
+    char op;
+    cout << "Enter First Number: ";
+    cin >> num1;
+    cout << "Enter Second Number: ";
+    cin >> num2;
+    cout << "Enter Operator: ";
+    cin >> op;
+    switch (op) {
+        case '+':
+            cout << sum(num1, num2) << endl;
+            break;
+        case '-':
+            cout << subtract(num1, num2) << endl;
+           break;
+        case '*':
+            cout << product(num1, num2) << endl;
+            break;
+        case '/':
+            cout << division(num1, num2) << endl;
+            break;
+    }
+    return 0;
+} */
+
+//problem 10
+int getTriangularNumber(int n) {
+    return n * (n + 1) / 2;
+}
+int main() {
+    for (int i = 1; i <= 75; i++) {
+
+    }
     return 0;
 }
